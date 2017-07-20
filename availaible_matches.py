@@ -23,4 +23,3 @@ def get_ids():
         print("......ID ERROR ..... or .....AVAILAIBLE MATCHES=0.....")
         quit(0)
     return mydict
-print(get_ids())
