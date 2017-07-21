@@ -1,6 +1,5 @@
 """imports a json and returns the availaible matches and id as a dictionary
 in cricbuzz"""
-import json 
 import urllib
 from bs4 import BeautifulSoup
 import re
