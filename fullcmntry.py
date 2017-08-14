@@ -11,8 +11,10 @@ import time
 import score
 f=1
 thisover={}
+old=[]
 def infinite(mtchid):
     global f
+    global old
     url="http://www.cricbuzz.com/match-api/"+str(mtchid)+"/commentary.json"
     jhand=urllib.request.urlopen(url).read()
     data=json.loads(jhand.decode())
@@ -83,7 +85,9 @@ def infinite(mtchid):
                 ind=item.index(' ')
                 print(item[ind+1:])
                 print('\n')
-    displaycmntry(newlist1)
+    if cmntry!=old:
+        old=cmntry
+        displaycmntry(newlist1)
     time.sleep(24)
 
 def fllcmntry(mtchid) :   

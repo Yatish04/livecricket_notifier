@@ -1,6 +1,6 @@
 """imports a json and returns the availaible matches and id as a dictionary
 in cricbuzz"""
-import urllib
+import urllib.request
 from bs4 import BeautifulSoup
 import re
 def get_ids():

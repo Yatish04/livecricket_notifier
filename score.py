@@ -113,7 +113,7 @@ def score1(mtchid):
             if self.innings=='yet to bat' :
                 print(self.name,'yet to bat')
             else:
-                print(self.name,self.innings,'innings','batting','\n','score',self.score)
+                print(self.name,self.innings,'innings','\n','score',self.score)
         def getbowlingteamscr(self):
             try:
                 print(self.name,self.score)
@@ -154,7 +154,10 @@ def score1(mtchid):
     """display section begins"""
     print('==========batsmen info =================')
     strikebatsman.getscore()
-    nonstrikebatsman.getscore()
+    try:
+        nonstrikebatsman.getscore()
+    except:
+        pass
     print('==========bowler info====================')
     strikebowler.getstatus()
     print('========================team info===================')
